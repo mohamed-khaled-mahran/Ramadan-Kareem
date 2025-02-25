@@ -115,11 +115,11 @@ nav {
         
     }
     .recipe-content {
-        font-size: 15px;
-        padding: 2em;
+        font-size: 1.33rem;
+        padding-right: 2em;
         display: flex;
         flex-direction: column;
-        /* justify-content: space-between; */
+        justify-content: flex-start;
         height: 100%;
       }
         .recipe-content h3 {

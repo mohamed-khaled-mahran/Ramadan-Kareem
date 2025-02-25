@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    direction: rtl;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(image/ramadan.jpg);
+    background-size: 300% 300%;
+    /* animation: gradientAnimation 10s ease infinite; */
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    font-size: 25px;
+
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    perspective: 1000px; /* Adds 3D effect */
+}
+
+.section {
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto;
+   
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    backface-visibility: hidden; /* Hide back during flip */
+    transform: rotateY(180deg);
+    transition: transform 0.6s ease-in-out;
+  
+}
+
+.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+button {
+  
+  --glow-color:rgb(176, 252, 255);
+    --glow-spread-color:rgba(123, 251, 255, 0.781);
+    --enhanced-glow-color: rgb(206, 255, 255);
+    --btn-color: rgb(61, 127, 136);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+  transition: all 0.3s;
+
+ }
+ 
+ button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ }
+ 
+ button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+ 
+ button:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+.section1{
+  text-align: right;
+  margin-top: 20px;
+}
+.hades1{
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+}
+.video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left; /* or right/left if you prefer */
+}
+
+.video-container {
+  width: 80%;
+  max-width: 400px; /* Limit the maximum width */
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden; 
+  box-shadow: 0 4px 10px rgb(106, 227, 243);;
+}
+.video-element {
+  width: 100%;
+  height: auto;
+  display: block;
+}

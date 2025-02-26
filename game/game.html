@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة الاختيار المتعدد</title>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            text-align: center;
+            margin: 0;
+            background: linear-gradient(135deg, #4E342E, #8D6E63, #D7A86E);
+            background-size: cover;
+            overflow: hidden;
+            direction: rtl;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        header {
+            border: 3px solid gold;
+            background: linear-gradient(to bottom, #FFF4C1, #D4AF37);
+
+            padding: 1.7vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 2vh;
+            font-weight: bold;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+        }
+
+
+        a {
+            color: rgb(26, 24, 24);
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1em;
+            transition: all 0.3s linear;
+
+        }
+
+        a:hover {
+
+            background-color: #7B6B43;
+            color: white;
+            padding: 0.5em;
+            border-radius: 5px;
+        }
+
+        #game {
+        padding-top: 10vh;
+
+        }
+
+        .question {
+            font-size: 2em;
+            color: #c5a334;
+
+            font-weight: bold;
+            margin-top: 8.5vh;
+            padding-bottom: 4vh;
+            padding-top: 10vh;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .option {
+            padding: 15px 25px;
+            margin: 5px;
+            border: 3px solid gold;
+            cursor: pointer;
+            width: 30vw;
+            background: linear-gradient(to bottom, #FFF4C1, #D4AF37);
+            border-radius: 30px;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease-in-out;
+        }
+
+        .option:hover {
+            background: linear-gradient(to bottom, #FFD700, #B8860B);
+        }
+
+        .alert {
+            position: fixed;
+            top: 20%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            display: none;
+            animation: fadeInOut 1.5s ease-in-out;
+        }
+
+        .alert.correct {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .alert.wrong {
+            background-color: #F44336;
+            color: white;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+        }
+        @media (max-width:920px){
+            .option{width: 80%;}
+        }
+
+
+        .star {
+            position: absolute;
+            background: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            box-shadow: 0 0 5px white;
+            animation: twinkle 2s infinite alternate;
+        }
+
+        #score-container {
+            position: fixed;
+            color: #c5a334;
+            top: 6vh;
+            left: 1vw;
+            margin-top: 20px;
+            font-size: 2.6em;
+            transition: transform 0.3s ease-in-out, color 0.3s;
+        }
+        #background-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 100vh;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .score-animate-green {
+            transform: scale(1.1);
+            color: green;
+        }
+        #Message{
+            position: fixed;
+            color: #c5a334;
+
+            top: 39vh;
+            left: 40vw;
+            font-size: 2em;
+
+        }
+
+    
+        #timer-container{
+            position: fixed;
+            color: #c5a334;
+            font-size: 2.6em;
+            direction: ltr;
+            position: fixed;
+            top: 11vh;
+            left: 1vw;
+            margin-top: 20px;
+           
+        }
+
+        @keyframes twinkle {
+            0% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#">الرئيسية</a>
+        <a href="#">التقويم</a>
+        <a href="#">الوصفات</a>
+        <a href="#">الدعاء</a>
+        <a href="#">الألعاب</a>
+        <a href="#store-section">المتجر</a>
+        <a href="ramdan.html" target="_self">تسجيل الدخول</a>
+    </header>
+    <video autoplay muted loop id="background-video">
+        <source src="vecteezy_blue-gradient-islamic-animation-background-with-rotating_21721167.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="game">
+        <div id="question" class="question"></div>
+        <div id="options" class="options"></div>
+
+    </div>
+
+    <div>
+        <p id="score-container">Score: <span id="score">0</span></p>
+        <p id="timer-container">Timer: <span id="timer"></span></p>
+        <p id="Message"></p>
+
+    </div>
+
+    <div id="alert" class="alert"></div>
+    <button class="start-button option" onclick="startGame()">ابدء اللعب الان </button>
+
+    <script>
+                document.getElementById("timer-container").style.display = "none";
+                document.getElementById("score-container").style.display = "none";
+
+        let timeLeft=10;
+        let timer;
+
+        let score = 0;
+        const questions = [
+            { question: "كم عدد أركان الإسلام؟", options: ["3", "4", "5", "6"], answer: "5" },
+            { question: "ما هو أول مسجد بني في الإسلام؟", options: ["المسجد الحرام", "المسجد الأقصى", "مسجد قباء", "المسجد النبوي"], answer: "مسجد قباء" },
+            { question: "في أي شهر يصوم المسلمون؟", options: ["رجب", "شوال", "رمضان", "ذو الحجة"], answer: "رمضان" },
+            { question: "ما هو عدد الصلوات المفروضة يوميًا؟", options: ["3", "4", "5", "6"], answer: "5" },
+            { question: "ما هو اسم السورة التي تعادل ثلث القرآن؟", options: ["الإخلاص", "الفاتحة", "الكوثر", "الناس"], answer: "الإخلاص" },
+            { question: "من هو خاتم الأنبياء؟", options: ["عيسى", "موسى", "محمد", "إبراهيم"], answer: "محمد" },
+            { question: "ما هي الليلة التي تعد خيرًا من ألف شهر؟", options: ["ليلة النصف من شعبان", "ليلة الإسراء", "ليلة القدر", "ليلة المولد النبوي"], answer: "ليلة القدر" },
+            { question: "كم مرة يجب على المسلم أداء الحج؟", options: ["مرة واحدة", "مرتين", "ثلاث مرات", "لا حد لها"], answer: "مرة واحدة" },
+            { question: "ما هو أول شهر في التقويم الهجري؟", options: ["رمضان", "محرم", "ذو الحجة", "رجب"], answer: "محرم" },
+            { question: "من هو الصحابي الملقب بالفاروق؟", options: ["أبو بكر", "عثمان بن عفان", "علي بن أبي طالب", "عمر بن الخطاب"], answer: "عمر بن الخطاب" }
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function startGame() {
+
+            document.querySelector(".start-button").style.display = "none";
+            document.getElementById("timer-container").style.display = "block";
+            document.getElementById("score-container").style.display = "block";
+
+
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            if (currentQuestionIndex >= questions.length) {
+               if(score>=5){ document.getElementById("Message").innerHTML = "<h2>تهانينا لقد فزت 🎉</h2>";} 
+               else{ document.getElementById("Message").innerHTML = "<h2>حظا أوفر المرة القادمه☹️</h2>";} 
+    
+                document.getElementById("game").style.display = "none";
+                document.getElementById("timer-container").style.display = "none";
+                document.getElementById("score-container").style.display = "none";
+                return;
+            }
+
+            const questionData = questions[currentQuestionIndex];
+            document.getElementById("question").textContent = questionData.question;
+            let optionsDiv = document.getElementById("options");
+            optionsDiv.innerHTML = "";
+            questionData.options.forEach(option => {
+                let button = document.createElement("button");
+                button.textContent = option;
+                button.classList.add("option");
+                button.onclick = () => checkAnswer(option);
+                optionsDiv.appendChild(button);
+            });
+
+
+            timeLeft = 10;
+            document.getElementById("timer").innerText = timeLeft;
+            clearInterval(timer);
+            timer = setInterval(() => {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    document.getElementById("timer").innerText = timeLeft;
+                }
+                 else {
+                    clearInterval(timer);
+
+                    document.getElementById("timer").innerText = "انتهي الوقت";
+                    checkAnswer(null);
+                }
+            }, 1000);
+        }
+
+        function checkAnswer(selected) {
+            const scoreElement = document.getElementById("score");
+            const scoreContainer = document.getElementById("score-container");
+
+            let correctAnswer = questions[currentQuestionIndex].answer;
+            if (selected === correctAnswer) {
+                showAlert("إجابة صحيحة!", "correct");
+                score++;
+                scoreContainer.classList.add("score-animate-green");
+
+            } else {
+                showAlert("إجابة خاطئة!", "wrong");
+                // score = Math.max(0, score - 1); minus 1 point 
+            }
+
+            scoreElement.textContent = score;
+
+            setTimeout(() => {
+                scoreContainer.classList.remove("score-animate-green", "score-animate-red");
+            }, 600);
+            setTimeout(() => {
+                currentQuestionIndex++;
+                loadQuestion();
+            }, 600);
+
+            clearInterval(timer);
+
+
+
+        }
+
+        function showAlert(message, type) {
+            const alertBox = document.getElementById("alert");
+            alertBox.textContent = message;
+            alertBox.className = `alert ${type}`;
+            alertBox.style.display = "block";
+            setTimeout(() => { alertBox.style.display = "none"; }, 700);
+        }
+
+
+
+        function createStar() {
+            const star = document.createElement("div");
+            star.classList.add("star");
+            const size = Math.random() * 3 + 1; //size of stars
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.top = `${Math.random() * window.innerHeight}px`;
+            star.style.left = `${Math.random() * window.innerWidth}px`;
+            star.style.animationDuration = `${Math.random() * 2 + 1}s`;
+            document.body.appendChild(star);
+        }
+
+        function generateStars(count) {
+            for (let i = 0; i < count; i++) {
+                createStar();
+            }
+        }
+
+        generateStars(250);
+    </script>
+</body>
+
+</html>

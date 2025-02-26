@@ -16,20 +16,51 @@
       <source src="Main_page_data/Wahawy_Ya_Wahawy.mp4" type="video/mp4">
       Your browser does not support the video tag.
   </video>  
-   <nav>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+
+
+   <!-- <nav>
       <a href="#">التقويم</a>
       <a href="#">الوصفات</a>
-      <a href="#">الدعاء</a>
+      <a href="Ramadan/اذكار.html">الدعاء</a>
       <a href="#store-section">المتجر</a>
-      <a href="Log_In/ramdan.html" target="_blank">تسجيل الدخول</a>
+      <li>
+         <li>
+            <a href="Log_In/ramdan.html">
+              <i class="fas fa-user"></i>
+            </a>
+          </li>
+          
+      <a href="Log_In/ramdan.html" >تسجيل الدخول</a>
+
    </nav>
-   
+    -->
+    <nav>
+      <ul>
+        <li><a href="#">التقويم</a></li>
+        <li><a href="#">الوصفات</a></li>
+        <li><a href="Ramadan/اذكار.html">الدعاء</a></li>
+        <li><a href="#store-section">المتجر</a></li>
+        <li class="tooltip">
+         <a href="Log_In/ramdan.html">
+           <i class="fas fa-user"></i>
+           <span class="tooltiptext">تسجيل الدخول</span>
+         </a>
+        </li>
+      </ul>
+    </nav>
+    
+    
    <div class="hero">
       <h1>رمضان مبارك 🌙</h1>
       <p>مرحبا بك في منصة تجمع بين الروحانية والمتعة خلال الشهر الكريم</p>
-      <a href="#featured-section" style="display: inline-block; padding: 0.8em 1.5em; background: #ffcc29; color: #333; border: none; border-radius: 5px; text-decoration: none;">
+      <!-- <a href="#featured-section" style="display: inline-block; padding: 0.8em 1.5em; background: #ffcc29; color: #333; border: none; border-radius: 5px; text-decoration: none;">
         اكتشف المزيد
-     </a>
+     </a> -->
+     <button class="new" onclick="location.href='#featured-section';"> اكتشف المزيد</button>
    </div>
 
    <div class="section" id="featured-section">
@@ -45,7 +76,7 @@
             <h3>وصفات رمضانية</h3>
             <p>استمتع بأشهى الأطباق التقليدية والحديثة.</p>
          </div>
-         <div class="feature">
+         <div class="feature" onclick="location.href='Ramadan/اذكار.html';">
             <img src="Main_page_data/dua.webp" alt="جدار الدعاء">
             <h3>الدعاء</h3>
             <p>شارك أدعيتك وتفاعل مع الآخرين.</p>
@@ -54,8 +85,8 @@
    </div>
 
    <div class="section" id="store-section">
-      <h1>المتجر</h1>
-      <h2>الأصناف</h2>
+      <h1 style="color: aliceblue;">المتجر</h1>
+      <h2 style="color: aliceblue;">الأصناف</h2>
       <div class="products" >
          <div class="product" onclick="location.href='Store/prayer_mats.html';">
             <img src="Store/Products/prayer mats.jpg" alt="منتج 1">

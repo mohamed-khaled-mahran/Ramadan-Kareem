@@ -102,6 +102,7 @@
 
         function loadQuestion() {
             if (currentQuestionIndex >= questions.length) {
+                 document.getElementById("Message").style.display = "block";
                 if (score >= 5) { document.getElementById("Message").innerHTML = "<h2>تهانينا لقد فزت 🎉</h2>"; }
                 else { document.getElementById("Message").innerHTML = "<h2>حظا أوفر المرة القادمه☹️</h2>"; }
                 // document.getElementById("game").remove();

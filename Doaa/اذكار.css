@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Darumadrop+One&family=Funnel+Display:wght@300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Reem+Kufi+Ink&family=Reem+Kufi:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); 
+
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +24,44 @@ body {
     font-size: 25px;
 
 }
+.myfont{
+  font-family: "Reem Kufi", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal; 
+}
+header {
+  background-color: #291305;
+  color: white;
+  padding: 1.5em 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav {
+  background: rgb(255, 239, 239);
+  padding: 1em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: rgb(26, 24, 24);
+  text-decoration: none;
+  font-size: 1.3em;
+  transition: all 0.3s linear;
+}
+
+nav ul li a:hover {
+  background-color: #7B6B43;
+  color: white;
+  padding: 0.5em;
+  border-radius: 5px;
+} 
 
 .container {
     position: relative;

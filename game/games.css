@@ -12,7 +12,7 @@ body {
     margin: 0;
     background: linear-gradient(135deg, #4E342E, #8D6E63, #D7A86E);
     background-size: cover;
-    /* overflow: hidden; */
+    overflow: hidden;
     direction: rtl;
     position: relative;
     width: 100vw;
@@ -61,7 +61,7 @@ a:hover {
 }
 
 .question {
-    font-size: 2vmin;
+    font-size: 2em;
     color: #c5a334;
 
     font-weight: bold;
@@ -86,7 +86,7 @@ a:hover {
     height: 10vh;
     background: linear-gradient(to bottom, #FFF4C1, #D4AF37);
     border-radius: 30px;
-    font-size: 2.2vw;
+    font-size: 4vw;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);

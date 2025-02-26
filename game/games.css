@@ -12,7 +12,7 @@ body {
     margin: 0;
     background: linear-gradient(135deg, #4E342E, #8D6E63, #D7A86E);
     background-size: cover;
-    overflow: hidden;
+    /* overflow: hidden; */
     direction: rtl;
     position: relative;
     width: 100vw;

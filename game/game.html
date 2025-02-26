@@ -54,8 +54,8 @@
     <script>
                 document.getElementById("timer-container").style.display = "none";
                 document.getElementById("score-container").style.display = "none";
-                document.getElementById("restart-button").style.display = "none";
-         window.onload = function() {
+                // document.getElementById("restart-button").style.display = "none";
+     window.onload = function() {
         document.getElementById("background-audio").play();
     };
 
@@ -87,10 +87,9 @@
             score = 0;
             currentQuestionIndex = 0;
             document.getElementById("score").textContent = score;
-
-
             loadQuestion();
         }
+        
         function restartGame() {
             document.getElementById("restart-button").style.display = "none";
             document.getElementById("Message").style.display = "none";
@@ -105,10 +104,8 @@
                 document.getElementById("game").style.display = "none";
                 document.getElementById("timer-container").style.display = "none";
                 document.getElementById("score-container").style.display = "none";
-               document.getElementById("restart-button").style.display = "block";
-                 return;
-                
-            }
+                document.getElementById("restart-button").style.display = "block";
+                 return; }
 
             const questionData = questions[currentQuestionIndex];
             document.getElementById("question").textContent = questionData.question;

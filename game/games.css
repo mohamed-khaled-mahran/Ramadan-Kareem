@@ -92,6 +92,12 @@ a:hover {
 .option:hover {
     background: linear-gradient(to bottom, #FFD700, #B8860B);
 }
+#restart-button{
+    z-index: 10000;
+    position: absolute;
+    top: 56vh;
+    left: 35vw;
+}
 
 .alert {
     position: fixed;
@@ -173,7 +179,7 @@ a:hover {
     color: #c5a334;
 
     top: 39vh;
-    left: 35vw;
+    left: 32vw;
     font-size: 2em;
 
 }

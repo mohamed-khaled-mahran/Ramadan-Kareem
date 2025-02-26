@@ -96,7 +96,7 @@ nav ul li a:hover {
     display: flex;
     /* justify-content: center; */
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 1rem;
     margin-top: 2em;
     justify-content: space-around;
     min-height: 200px; 

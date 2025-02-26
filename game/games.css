@@ -175,11 +175,10 @@ a:hover {
 }
 
 #Message {
-    position: fixed;
+    position: relative;
     color: #c5a334;
-
-    top: 39vh;
-    left: 33vw;
+    top: 44vh;
+    left: -1vw;
     font-size: 2em;
 
 }

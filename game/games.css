@@ -18,15 +18,7 @@ body {
     width: 100vw;
     height: 100vh;
 }
-/* .start-button option{
-    position: fixed;
-    margin-top: 10vh;
-    font-family: "Kufam", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
 
-} */
 
 header {
     border: 3px solid gold;
@@ -85,6 +77,7 @@ a:hover {
 }
 
 .option {
+    position: fixed;
     padding: 15px 25px;
     margin: 5px;
     border: 3px solid gold;
@@ -195,6 +188,7 @@ a:hover {
     left: 1vw;
     margin-top: 20px;
     font-size: 1.7vmin;
+    font-weight: bold;
     transition: transform 0.3s ease-in-out, color 0.3s;
 }
 
@@ -202,6 +196,7 @@ a:hover {
     position: fixed;
     color: #c5a334;
     font-size: 1.7vmin;
+    font-weight: bold;
 
     direction: ltr;
     position: fixed;

@@ -4,7 +4,7 @@
 *{
     font-family: "Kufam", serif;
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 800;
     font-style: normal;
   }
 body {
@@ -18,6 +18,15 @@ body {
     width: 100vw;
     height: 100vh;
 }
+.start-button{
+    position: fixed;
+  padding-top: 9vh;
+  font-family: "Kufam", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+
+}
 
 header {
     border: 3px solid gold;
@@ -27,7 +36,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 2vh;
+    font-size: 2.5vh;
     font-weight: bold;
     width: 100%;
     position: fixed;

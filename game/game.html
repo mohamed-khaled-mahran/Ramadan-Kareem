@@ -5,35 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لعبة الاختيار المتعدد</title>
-     <link rel="stylesheet" href="games.css">
-     <link rel="icon" type="image/x-icon" href="lantern.png">
+    <link rel="stylesheet" href="games.css">
+    <link rel="icon" type="image/x-icon" href="lantern.png">
 
 </head>
 
 <body>
-    
- 
 
 
-    
+
+
+
     <header>
-    <a href="../main.html">الرئيسية</a>
-    <a href="../calender/calender.html">التقويم</a>
-    <a href="../Food_Recipes/Food_Recipes.html">الوصفات</a>
-    <a href="game.html">العب</a>
-    <a href="../Doaa/اذكار.html">الدعاء</a>
-     <a href="../main.html#store-section">المتجر</a>
+        <a href="../main.html">الرئيسية</a>
+        <a href="../calender/calender.html">التقويم</a>
+        <a href="../Food_Recipes/Food_Recipes.html">الوصفات</a>
+        <a href="game.html">العب</a>
+        <a href="../Doaa/اذكار.html">الدعاء</a>
+        <a href="../main.html#store-section">المتجر</a>
     </header>
-    
-  <video autoplay muted loop id="background-video">
+
+    <video autoplay muted loop id="background-video">
         <source src="vecteezy_blue-gradient-islamic-animation-background-with-rotating_21721167.mp4" type="video/mp4">
         Your browser does not support the video tag.
-    </video> 
+    </video>
     <audio id="background-audio" loop>
-    <source src="ramadan-300987.mp3" type="audio/mpeg">
-</audio>
+        <source src="ramadan-300987.mp3" type="audio/mpeg">
+    </audio>
 
-    <div id="game">
+    <div id="game" class="game">
         <div id="question" class="question"></div>
         <div id="options" class="options"></div>
 
@@ -43,23 +43,25 @@
         <p id="score-container">Score: <span id="score">0</span></p>
         <p id="timer-container">Timer: <span id="timer"></span></p>
         <p id="Message"></p>
-        
+
 
     </div>
 
     <div id="alert" class="alert"></div>
     <button class="start-button option" onclick="startGame()">ابدء اللعب الان </button>
-    <button id="restart-button" class="option" onclick="restartGame()" style="display: none;">إعادة تشغيل اللعبة</button>
+    <button id="restart-button" class="option" onclick="restartGame()" style="display: none;">إعادة تشغيل  اللعبة</button>
 
     <script>
-                document.getElementById("timer-container").style.display = "none";
-                document.getElementById("score-container").style.display = "none";
-                // document.getElementById("restart-button").style.display = "none";
-     window.onload = function() {
-        document.getElementById("background-audio").play();
-    };
+        document.getElementById("timer-container").style.display = "none";
+        document.getElementById("score-container").style.display = "none";
 
-        let timeLeft=10;
+
+        // document.getElementById("restart-button").style.display = "none";
+        window.onload = function () {
+            document.getElementById("background-audio").play();
+        };
+
+        let timeLeft = 10;
         let timer;
 
         let score = 0;
@@ -84,12 +86,14 @@
             document.getElementById("restart-button").style.display = "none";
             document.getElementById("timer-container").style.display = "block";
             document.getElementById("score-container").style.display = "block";
+            document.getElementById("game").style.display = "block";
+
             score = 0;
             currentQuestionIndex = 0;
             document.getElementById("score").textContent = score;
             loadQuestion();
         }
-        
+
         function restartGame() {
             document.getElementById("restart-button").style.display = "none";
             document.getElementById("Message").style.display = "none";
@@ -98,14 +102,16 @@
 
         function loadQuestion() {
             if (currentQuestionIndex >= questions.length) {
-               if(score>=5){ document.getElementById("Message").innerHTML = "<h2>تهانينا لقد فزت 🎉</h2>";} 
-               else{ document.getElementById("Message").innerHTML = "<h2>حظا أوفر المرة القادمه☹️</h2>";} 
-    
+                if (score >= 5) { document.getElementById("Message").innerHTML = "<h2>تهانينا لقد فزت 🎉</h2>"; }
+                else { document.getElementById("Message").innerHTML = "<h2>حظا أوفر المرة القادمه☹️</h2>"; }
+                // document.getElementById("game").remove();
                 document.getElementById("game").style.display = "none";
+                document.getElementById("restart-button").style.display = "block";
                 document.getElementById("timer-container").style.display = "none";
                 document.getElementById("score-container").style.display = "none";
-                document.getElementById("restart-button").style.display = "block";
-                 return; }
+                return;
+            }
+            document.getElementById("game").style.display = "block";
 
             const questionData = questions[currentQuestionIndex];
             document.getElementById("question").textContent = questionData.question;
@@ -128,7 +134,7 @@
                     timeLeft--;
                     document.getElementById("timer").innerText = timeLeft;
                 }
-                 else {
+                else {
                     clearInterval(timer);
 
                     document.getElementById("timer").innerText = "انتهي الوقت";

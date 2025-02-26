@@ -81,8 +81,12 @@
         function startGame() {
 
             document.querySelector(".start-button").style.display = "none";
+            document.getElementById("restart-button").style.display = "none";
             document.getElementById("timer-container").style.display = "block";
             document.getElementById("score-container").style.display = "block";
+            score = 0;
+            currentQuestionIndex = 0;
+            document.getElementById("score").textContent = score;
 
 
             loadQuestion();

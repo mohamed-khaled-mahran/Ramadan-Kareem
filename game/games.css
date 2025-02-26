@@ -183,14 +183,14 @@ a:hover {
     top: 6vh;
     left: 1vw;
     margin-top: 20px;
-    font-size: 1.4em;
+    font-size: 2em;
     transition: transform 0.3s ease-in-out, color 0.3s;
 }
 
 #timer-container {
     position: fixed;
     color: #c5a334;
-    font-size: 1.4em;
+    font-size: 2em;
 
     direction: ltr;
     position: fixed;

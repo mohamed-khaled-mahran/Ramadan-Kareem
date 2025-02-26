@@ -18,16 +18,6 @@ body {
     width: 100vw;
     height: 100vh;
 }
-/* .start-button option{
-    position: fixed;
-    margin-top: 10vh;
-    font-family: "Kufam", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-
-} */
-
 header {
     border: 3px solid gold;
     background: linear-gradient(to bottom, #FFF4C1, #D4AF37);
@@ -71,7 +61,6 @@ a:hover {
 .question {
     font-size: 2.1em;
     color: #c5a334;
-
     font-weight: bold;
     margin-top: 8.5vh;
     padding-bottom: 4vh;

@@ -92,13 +92,14 @@ a:hover {
 .option:hover {
     background: linear-gradient(to bottom, #FFD700, #B8860B);
 }
+
 #restart-button{
     z-index: 10000;
-    position: absolute;
+    position: fixed;
     top: 56vh;
-    left: 35vw;
+    left: 36vw;
+    width: 30vw;
 }
-
 .alert {
     position: fixed;
     top: 20%;
@@ -178,10 +179,18 @@ a:hover {
     position: relative;
     color: #c5a334;
     top: 44vh;
-    left: -1vw;
+    left: 1vw;
     font-size: 2em;
 
 }
+    #Messagescore{
+        position: relative;
+        color: #c5a334;
+        top: 59vh;
+        left: 2vw;
+        font-size: 2em;
+
+    }
 #score-container {
     position: fixed;
     color: #c5a334;

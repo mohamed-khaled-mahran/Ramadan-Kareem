@@ -20,7 +20,7 @@ body {
 }
 .start-button{
     position: fixed;
-  padding-top: 9vh;
+  margin-top: 9vh;
   font-family: "Kufam", serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -90,6 +90,7 @@ a:hover {
     border: 3px solid gold;
     cursor: pointer;
     width: 30vw;
+    height: 10vh;
     background: linear-gradient(to bottom, #FFF4C1, #D4AF37);
     border-radius: 30px;
     font-size: 2em;

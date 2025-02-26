@@ -43,15 +43,18 @@
         <p id="score-container">Score: <span id="score">0</span></p>
         <p id="timer-container">Timer: <span id="timer"></span></p>
         <p id="Message"></p>
+        
 
     </div>
 
     <div id="alert" class="alert"></div>
     <button class="start-button option" onclick="startGame()">ابدء اللعب الان </button>
+    <button id="restart-button option" class="option" onclick="restartGame()" style="display: none;">إعادة تشغيل اللعبة</button>
 
     <script>
                 document.getElementById("timer-container").style.display = "none";
                 document.getElementById("score-container").style.display = "none";
+                document.getElementById("restart-button").style.display = "none";
          window.onload = function() {
         document.getElementById("background-audio").play();
     };
@@ -84,6 +87,10 @@
 
             loadQuestion();
         }
+        function restartGame() {
+            document.getElementById("restart-button").style.display = "none";
+            startGame();
+        }
 
         function loadQuestion() {
             if (currentQuestionIndex >= questions.length) {
@@ -93,7 +100,9 @@
                 document.getElementById("game").style.display = "none";
                 document.getElementById("timer-container").style.display = "none";
                 document.getElementById("score-container").style.display = "none";
-                return;
+               document.getElementById("restart-button").style.display = "block";
+                 return;
+                
             }
 
             const questionData = questions[currentQuestionIndex];

@@ -18,7 +18,7 @@ body {
     width: 100vw;
     height: 100vh;
 }
-.start-button option{
+/* .start-button option{
     position: fixed;
     margin-top: 10vh;
     font-family: "Kufam", serif;
@@ -26,7 +26,7 @@ body {
     font-weight: 700;
     font-style: normal;
 
-}
+} */
 
 header {
     border: 3px solid gold;

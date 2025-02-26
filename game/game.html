@@ -9,9 +9,11 @@
 </head>
 
 <body>
-    <audio controls>
-  <source src="ramadan-300987.mp3" type="audio/mpeg">
-   </audio>
+  <audio id="background-audio" loop>
+    <source src="ramadan-300987.mp3" type="audio/mpeg">
+</audio>
+
+
     
     <header>
     <a href="../calender/calender.html">التقويم</a>
@@ -44,6 +46,9 @@
     <script>
                 document.getElementById("timer-container").style.display = "none";
                 document.getElementById("score-container").style.display = "none";
+         window.onload = function() {
+        document.getElementById("background-audio").play();
+    };
 
         let timeLeft=10;
         let timer;

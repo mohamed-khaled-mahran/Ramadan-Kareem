@@ -1,69 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     direction: rtl;
     text-align: center;
- }
- body {
-background-image: url(image/Ramadan-Eftar.jpg);
-background-size: 300% 300%;
-color: #000000;
-font-family: 'Arial', sans-serif;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: fixed; 
+}
+
+body {
+    background-image: url(image/Ramadan-Eftar.jpg);
+    color: #000000;
+    font-family: "Reem Kufi", serif;
+    font-size: 1.175rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
- header {
+header {
     background-color: #291305;
     color: white;
     padding: 1.5em 0;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
- }
- 
+}
+
 nav {
-   background: rgb(255, 239, 239); 
-   padding: 1em;      
- }
- 
+    background: rgb(255, 239, 239);
+    padding: 1em;
+}
 
- nav ul {
-   list-style: none;  
-   margin: 0;
-   padding: 0;
-   
-  
-   display: flex;               
-   justify-content: center;     
-   align-items: center;       
-   gap: 2rem;                 
- }
- 
- nav ul li a {
-   color: rgb(26, 24, 24);
-   text-decoration: none;
-   font-size: 1.3em;
- }
- 
- nav ul li a:hover {
-   text-decoration: underline;
- }
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
 
- .recipes {
+nav ul li a {
+    color: rgb(26, 24, 24);
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: all 0.3s linear;
+}
+
+nav ul li a:hover {
+    background-color: #7B6B43;
+    color: white;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+.recipes {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 2em;
     justify-content: space-around;
-    min-height: 200px; 
- }
- .recipe {
+    min-height: 200px;
+}
+
+.recipe {
     background: #fff;
     padding: 1.5em;
     border-radius: 8px;
@@ -74,111 +77,110 @@ nav {
     height: 450px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
- }
-   .recipe img {
-      width: 100%;
-      height: 70%;
-      object-fit: cover;
-      border-radius: 8px;
-   }
-   .recipe h3 {
-      margin: 1em;
-      color: #051138;
-   }
-   .recipe:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  }
-  .recipe-container {
+}
+
+.recipe img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.recipe h3 {
+    margin: 1em;
+    color: #051138;
+}
+
+.recipe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.recipe-container {
     background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
     display: flex;
     flex-direction: row;
     margin-top: 2em;
     justify-content: space-between;
     height: 70vh;
-    direction: ltr;
     min-height: fit-content;
-    }
-    .Recipe-image-div {
-    margin: .5em;
+}
+
+.Recipe-image-div {
+    margin: 0.5em;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-    margin-right: auto;
     width: 50vw;
     height: 95%;
     cursor: pointer;
-    }
-    .Recipe-image-div img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
-        
-    }
-    .recipe-content {
-        font-size: 1.33rem;
-        padding-right: 2em;
-        display: flex;
+}
+
+.Recipe-image-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.recipe-content {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.4rem;
+    padding-right: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: fit-content;
+    height: 100%;
+}
+
+.recipe-content h3, .recipe-content p {
+    color: #051138;
+    margin: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .recipe-container {
         flex-direction: column;
-        justify-content: flex-start;
-        min-height: fit-content;
+        text-align: center;
+    }
+    .Recipe-image-div, .recipe-content {
+        width: auto;
+        height: auto;
+        padding: 0;
+        flex: 1 1 100%;
+    }
+}
 
-        height: 100%;
-      }
-        .recipe-content h3 {
-            color: #051138;
-            margin: 1em;
-        }
-        .recipe-content p {
-            color: #051138;
-            margin-top: 1em;
-        }
-        
-        @media screen and (max-width: 768px) {
-            
-            .recipe-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .Recipe-image-div, .recipe-content {
-                width: auto;
-                height: auto;
-                padding: 0;
-                flex: 1 1 100%;
-            }
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
 
-        }
-        
- .tooltip {
-   position: relative;
-   display: inline-block;
- }
- 
- .tooltip .tooltiptext {
-   visibility: hidden;
-   opacity: 0;
-   width: 120px;
-   background-color: #fff;
-   color: #333;
-   text-align: center;
-   padding: 5px 8px;
-   border-radius: 6px;
-   position: absolute;
-   top: 50%; 
-   right: 10px;
-   transform: translateX(-50%);
-   z-index: 1;
-   transition: opacity 0.3s;
- }
- 
- .tooltip:hover .tooltiptext {
-   visibility: visible;
-   opacity: 1;
- }
- footer {
+.tooltip .tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    width: 120px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+footer {
     background: #f3efef;
     color: rgb(12, 12, 12);
     padding: 1.5em;
     margin-top: 20px;
- }
+}

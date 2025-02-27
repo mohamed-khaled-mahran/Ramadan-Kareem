@@ -173,7 +173,7 @@ a:hover {
     position: relative;
     color: #c5a334;
     top: 30.2vh;
-    left: 1vw;
+    left: 0vw;
     font-size: 2em;
 
 }
@@ -181,7 +181,7 @@ a:hover {
         position: relative;
         color: #c5a334;
         top: 47vh;
-        left: 2vw;
+        left: 0vw;
         font-size: 2em;
 
     }

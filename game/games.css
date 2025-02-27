@@ -140,12 +140,6 @@ a:hover {
     }
 }
 
-@media (max-width:920px) {
-    .option {
-        width: 80%;
-    }
-}
-
 
 .star {
     position: absolute;
@@ -223,3 +217,54 @@ a:hover {
         opacity: 1;
     }
 }
+@media (min-width: 310px) and (max-width:900px ){ 
+    /* phone */
+            header {
+                font-size: 0.8em;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0.6rem;
+                width: 100vw;
+            }
+
+            .question {
+                font-size: 1.3em;
+            }
+
+            .option {
+                font-size: 0.9em;
+                padding: 10px;
+                min-width: 30vw;
+                max-width: 60vw;
+            }
+
+            #restart-button{
+               
+                top: 50vh;
+                left: 30vw;
+                min-width: 42vw ;
+            }
+            #Message{
+        
+                
+                top: 40vh;
+                font-size: 0.8em;
+            }
+            #Messagescore{
+            
+                color: #c5a334;
+                top: 60vh;
+               
+                font-size: 1em;
+        
+            }
+            #score-container{
+                font-size: 1.3em;
+            }
+            #timer-container{
+                font-size: 1.3em;
+            }
+
+           
+            }

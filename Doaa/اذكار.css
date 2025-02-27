@@ -76,11 +76,11 @@ nav ul li a:hover {
 }
 
 .section {
-    position: absolute;
+    position: fixed;
     width: 80%;
-    height: 70%;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 20px;
+    height: 55%;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 4vh 3vh 0vh 3vh;
     border-radius: 10px;
     overflow-y: auto;
    

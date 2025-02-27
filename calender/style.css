@@ -129,6 +129,7 @@ tr:nth-child(even) {
     color: rgb(12, 12, 12);
     padding: 1.2em;
      bottom:0px;
+     width:100vw;
  }
  .background-video {
 position: fixed;

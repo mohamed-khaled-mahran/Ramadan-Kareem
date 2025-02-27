@@ -96,7 +96,7 @@ a:hover {
 #restart-button{
     z-index: 10000;
     position: fixed;
-    top: 56vh;
+    top: 47vh;
     left: 36vw;
     width: 30vw;
 }
@@ -178,7 +178,7 @@ a:hover {
 #Message {
     position: relative;
     color: #c5a334;
-    top: 42vh;
+    top: 29vh;
     left: 1vw;
     font-size: 2em;
 
@@ -186,7 +186,7 @@ a:hover {
     #Messagescore{
         position: relative;
         color: #c5a334;
-        top: 59vh;
+        top: 47vh;
         left: 2vw;
         font-size: 2em;
 

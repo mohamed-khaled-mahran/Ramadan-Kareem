@@ -6,9 +6,43 @@
     <title>Document</title>
     <link rel="stylesheet" href="ramdan.css">
     <script src="https://kit.fontawesome.com/f3e40278d2.js" crossorigin="anonymous"></script>
-     <link rel="icon" type="image/x-icon" href="../game/lantern.png">
 </head>
 <body>
+    <header>
+        <h1>روح رمضان</h1>
+        <p>عش معنا أجواء رمضان المميزة</p>
+     </header>
+     <video autoplay loop muted playsinline class="background-video">
+        <source src="Main_page_data/Wahawy_Ya_Wahawy.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>  
+    <!-- styling for the log in icon -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+     </label>   
+     <ul>
+       <li><a href="../main.html">الرئيسية</a></li>
+       <li><a href="calender/calender.html">التقويم</a></li>
+       <li><a href="Food_Recipes/Food_Recipes.html">الوصفات</a></li>
+       <li><a href="Doaa/اذكار.html">الدعاء</a></li>
+       <li><a href="game/game.html">الألعاب</a></li>
+       <li><a href="#store-section">المتجر</a></li>
+       <li class="tooltip">
+        <a href="Log_In/ramdan.html">
+          <i class="fas fa-user"></i>
+          <span class="tooltiptext">تسجيل الدخول</span>
+        </a>
+       </li>
+     </ul>
+    </nav>
+
+
     <div class="login-box">
         <h1>تسجيل الدخول</h1>
         <div>
@@ -27,6 +61,6 @@
                 <span class="icon"><i class="fa-brands fa-x-twitter"></i></a></span>
             </div>
         </div>
-    </div>
+    </div> 
 </body>
 </html>

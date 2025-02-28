@@ -21,25 +21,36 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; 
-    font-size: 25px;
+    font-family: "Reem Kufi", serif;
+    font-size: 1.175rem;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;  
 
 }
 .myfont{
   font-family: "Reem Kufi", serif;
   font-optical-sizing: auto;
   font-weight: weight;
-  font-style: normal;
-  font-size: 1.1rem;
+  font-style: normal; 
 }
 header {
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
   background-color: #291305;
   color: white;
-  padding: 1.5em 0;
+  padding: 1.2em 0;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 nav {
   background: rgb(255, 239, 239);
   padding: 1em;
+  z-index: 100;
+  top: 6em;
+  position: fixed;
+  width: 100%;
 }
 
 nav ul {
@@ -65,6 +76,7 @@ nav ul li a:hover {
 } 
 
 .container {
+  margin-top: 10rem;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -76,11 +88,11 @@ nav ul li a:hover {
 }
 
 .section {
-    position: fixed;
+    position: absolute;
     width: 80%;
     height: 70%;
-    background: rgba(255, 255, 255, 0.7);
-    padding: 4vh 3vh 0vh 3vh;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
     border-radius: 10px;
     overflow-y: auto;
    
@@ -190,4 +202,79 @@ button {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.checkbtn {
+  font-size: 22px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 1050px) {
+  /* label.logo { */
+     /* padding-left: 30px; */
+  /* } */
+  /* nav ul li a { */
+    /* font-size: 16px; */
+  /* } */
+}
+
+/* Responsive media query code for small screen */
+@media (max-width: 890px) {
+
+  .checkbtn {
+    display: flex;
+  }
+  nav{
+     display: flex;
+     
+     /* justify-content: right; */
+  }
+  /* label.logo { */
+    /* font-size: 22px; */
+  /* } */
+  ul {
+   
+   display: flex;
+
+   flex-flow: column;
+   top: 9em;
+    position: fixed;
+    width: 100%;
+    height: 83vh;
+    background: rgb(255, 239, 239);
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li {
+    /* display: block; */
+    margin: 0.1rem 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 25px;
+  }
+  a:hover,
+  a.active {
+    /* background: none; */
+    /* color: #0082e6; */
+  }
+  #check:checked~ul {
+    left: 0;
+  }
+section {
+  background: url("bg.jpg") no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+ul,li{
+  text-decoration: none;
+}
 }

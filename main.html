@@ -1,100 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>روح رمضان</title>
-   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <header>
-      <h1>روح رمضان</h1>
-      <p>عش معنا أجواء رمضان المميزة</p>
-   </header>
-   <video autoplay loop muted playsinline class="background-video">
-      <source src="Main_page_data/Wahawy_Ya_Wahawy.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-  </video>  
-  <!-- styling for the log in icon -->
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  />
-  <nav>
-   <input type="checkbox" id="check">
-   <label for="check" class="checkbtn">
-      <i class="fas fa-bars"></i>
-   </label>   
-   <ul>
-      <li><a href="main.html">الرئيسية</a></li>
-     <li><a href="calender/calender.html">التقويم</a></li>
-     <li><a href="Food_Recipes/Food_Recipes.html">الوصفات</a></li>
-     <li><a href="Doaa/اذكار.html">الدعاء</a></li>
-     <li><a href="game/game.html">الألعاب</a></li>
-     <li><a href="#store-section">المتجر</a></li>
-     <li class="tooltip">
-      <a href="Log_In/ramdan.html">
-        <i class="fas fa-user"></i>
-        <span class="tooltiptext">تسجيل الدخول</span>
-      </a>
-     </li>
-   </ul>
- </nav>
-   
-   <div class="hero">
-      <h1>رمضان مبارك 🌙</h1>
-      <p>مرحبا بك في منصة تجمع بين الروحانية والمتعة خلال الشهر الكريم</p>
-      <button class="main_button" onclick="location.href='#featured-section';"> اكتشف المزيد</button>
-   </div>
-
-   <div class="section">
-      <h1 class="store-text">أقسام مميزة</h1>
-      <div class="products">
-         <div class="product" onclick="location.href='calender/calender.html';">
-            <img src="Main_page_data/calender.webp" alt="التقويم الرمضاني">
-            <h3>التقويم الرمضاني</h3>
-            <p>مواقيت دقيقة للسحور والإفطار.</p>
-         </div>
-         <div class="product" onclick="location.href='game/game.html';">
-            <img src="Main_page_data/game.jpg" alt="الألعاب">
-            <h3>الألعاب</h3>
-            <p>استمتع بألعاب تعليمية وترفيهية.</p>
-         </div>
-         <div class="product" onclick="location.href='Food_Recipes/Food_Recipes.html';">
-            <img src="Main_page_data/recipes.webp" alt="وصفات رمضانية">
-            <h3>وصفات رمضانية</h3>
-            <p>استمتع بأشهى الأطباق التقليدية والحديثة.</p>
-         </div>
-         <div class="product" onclick="location.href='Doaa/اذكار.html';">
-            <img src="Main_page_data/dua.jpg" alt="جدار الدعاء">
-            <h3>الدعاء</h3>
-            <p>شارك أدعيتك وتفاعل مع الآخرين.</p>
-         </div>
-      </div>
-   </div>
-
-   <div class="section" id="store-section">
-      <h1 style="color: white;">المتجر</h1>
-      <h2 style="color: white;">الأصناف</h2>
-      <div class="products" >
-         <div class="product" onclick="location.href='Store/prayer_mats.html';">
-            <img src="Store/Products/prayer mats.jpg" alt="منتج 1">
-            <h3>سجادة صلاة</h3>
-         </div>
-         <div class="product" onclick="location.href='Store/Quran_books.html';">
-            <img src="Store/Products/Quran_books.webp" alt="منتج 2">
-            <h3>كتب قرآن</h3>
-         </div>
-         <div class="product" onclick="location.href='Store/Masabeh.html';">
-            <img src="Store/Products/misbahas.webp" alt="منتج 3">
-            <h3>سبح</h3>
-         </div>
-      </div>
-
-   </div>
-
-   <footer>
-      <p>© 2025 - جميع الحقوق محفوظة لموقع روح رمضان</p>
-   </footer>
-</body>
-</html>

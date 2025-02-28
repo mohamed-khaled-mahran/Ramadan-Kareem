@@ -94,7 +94,7 @@ nav ul li a:hover {
     text-align: center;
     width: 20rem;
     margin-top: 10em;
-    height: 450px;
+    height: 30rem;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* z-index: -1; */
